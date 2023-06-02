@@ -1,5 +1,3 @@
-// Este es el programa que se encarga de procesar lo que aparece en pantalla en cada momento y de recoger los datos introducidos
-
 var distribuciones;
 var eleccionesDocente = "";
 var eleccionesAlumnos = "";
