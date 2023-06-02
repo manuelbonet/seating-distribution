@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>Recoger y procesar datos</title>
+	<link href="style.css" rel="stylesheet" type="text/css" />
+	<script src="script.js">
+	</script>
+	<script src="DatosClase.js">
+	</script>
+	<script src="DistribucionClase.js">
+	</script>
+</head>
+
+<body>
+  <h2>Creador de distribuciones</h2>
+	<div id="introducir-datos" style="display: block;">
+		<h3>Datos básicos</h3>
+    <h4>Elecciones del docente</h4>
+		<!-- file invisible que es llamado por button -->
+		<input type="file" id="archivo-docente" style="display: none;" accept=".csv,.tsv,.txt" onchange="leerDocente()"></input>
+    <input type="button" id="boton-docente" value="Escoger archivo..." onclick="document.getElementById('archivo-docente').click();"/>
+
+    <h4>Peso de las elecciones del docente</h4>
+    <input type="number" id="peso-docente" value=1>
+
+    <h4>Elecciones de los alumnos</h4>
+    
+    <!-- file invisible que es llamado por button -->
+    <input type="file" id="archivo-alumnos" style="display: none;" accept=".csv,.tsv,.txt"  onchange="leerAlumnos()"></input>
+    <input type="button" id="boton-alumnos" value="Escoger archivo..." onclick="document.getElementById('archivo-alumnos').click();"/>
+
+    <h4>Peso de las elecciones de los alumnos</h4>
+    <input type="number" id="peso-alumnos" value=1>
+
+    <h4>Filas</h4>
+    <input type="number" id="columnas" value=4>
+
+    <h3>Ajustes avanzados</h3>
+    <h4>Ponderaciones</h4>
+    <input type="text" id="ponderacion" placeholder="Datos separados por comas" value="-3, -1, 0, 1, 3">
+
+    <h4>Distribuciones en paralelo</h4>
+    <input type="number" id="distribuciones-en-paralelo" value=10>
+
+    <h4>Valor de mutación</h4>
+    <input type="number" id="valor-mutacion" value=0.05>
+
+    <h4>Valor de muerte</h4>
+    <input type="number" id="valor-muerte" value=0.01>
+
+    <br /><br />
+
+    <input type="button" value = "Introducir datos" onclick="validarDatos()">
+  
+  </div>
+  <div id="calcular-distribuciones" style="display: none">
+    <h3>Avanzar generaciones</h3>
+    <input type="number" id="generaciones-a-avanzar" value=1000>
+     
+    <input type="button" id="boton-avanzar-generaciones" value="Avanzar" onclick="avanzarGeneraciones()">
+
+    <h3>Mejor distribución</h3>
+    <div id="mejor-distribucion"></div>
+
+    <h3>Información</h3>
+    <div id="informacion-progreso"></div>
+  </div>
+</body>
+
+</html>
