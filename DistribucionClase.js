@@ -1,5 +1,3 @@
-// Este es el programa que se encarga procesar las distintas distribuciones y de buscar la mejor posible
-
 class Distribuciones {
   constructor(distribucionesEnParalelo, columnas, listaDeAlumnos, eleccionesAlumnos, eleccionesDocente, pesoAlumnos, pesoDocente, ponderacion, valorMutacion, valorMuerte) {
     this.distribucionesEnParalelo = distribucionesEnParalelo;
