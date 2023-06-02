@@ -1,5 +1,3 @@
-// Este es el programa que se encarga de procesar los datos que son introducidos desde la página web
-
 class Datos{
   static listaAElecciones(lista){
     let elecciones = [];
